@@ -1,0 +1,42 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+MONGO_URI = os.getenv("MONGO_URI")
+DB_NAME = os.getenv("DB_NAME")
+MAX_CONCURRENT_PDF_TASKS = int(os.getenv("MAX_CONCURRENT_PDF_TASKS"))
+MAX_PDF_FILE_SIZE = int(os.getenv("MAX_PDF_FILE_SIZE"))
+
+ADMIN_EMAIL = os.getenv("ADMIN_EMAIL")
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
+CLERK_SECRET_KEY = os.getenv("CLERK_SECRET_KEY")
+
+DEFAULT_TOKEN_RATE_PKR = float(os.getenv("DEFAULT_TOKEN_RATE_PKR"))
+
+PAYMENT_JAZZCASH_NUMBER = os.getenv("PAYMENT_JAZZCASH_NUMBER")
+PAYMENT_JAZZCASH_NAME = os.getenv("PAYMENT_JAZZCASH_NAME")
+
+PAYMENT_EASYPAISA_NUMBER = os.getenv("PAYMENT_EASYPAISA_NUMBER")
+PAYMENT_EASYPAISA_NAME = os.getenv("PAYMENT_EASYPAISA_NAME")
+
+PAYMENT_NAYAPAY_NUMBER = os.getenv("PAYMENT_NAYAPAY_NUMBER")
+PAYMENT_NAYAPAY_NAME = os.getenv("PAYMENT_NAYAPAY_NAME")
+PAYMENT_NAYAPAY_USERNAME = os.getenv("PAYMENT_NAYAPAY_USERNAME")
+PAYMENT_NAYAPAY_IBAN = os.getenv("PAYMENT_NAYAPAY_IBAN")
+
+PAYMENT_MEEZAN_NAME = os.getenv("PAYMENT_MEEZAN_NAME")
+PAYMENT_MEEZAN_ACCOUNT = os.getenv("PAYMENT_MEEZAN_ACCOUNT")
+PAYMENT_MEEZAN_IBAN = os.getenv("PAYMENT_MEEZAN_IBAN")
+
+ADMIN_TOKEN_SECRET = os.getenv("ADMIN_TOKEN_SECRET")
+ADMIN_TOKEN_EXPIRY_HOURS = int(os.getenv("ADMIN_TOKEN_EXPIRY_HOURS"))
+USERS_COLLECTION = os.getenv("USERS_COLLECTION")
+CLERK_API_BASE_URL = os.getenv("CLERK_API_BASE_URL")
+
+
+cors_admin = os.getenv("CORS_ADMIN_ORIGINS", "")
+CORS_ADMIN_ORIGINS = [origin.strip() for origin in cors_admin.split(",") if origin.strip()]
+
+cors_frontend = os.getenv("CORS_FRONTEND_ORIGINS", "")
+CORS_FRONTEND_ORIGINS = [origin.strip() for origin in cors_frontend.split(",") if origin.strip()]

@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: var(--canvas);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-surface-4: var(--surface-4);
+
+  --color-hairline: var(--hairline);
+  --color-hairline-strong: var(--hairline-strong);
+  --color-hairline-tertiary: var(--hairline-tertiary);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-focus: var(--primary-focus);
+  --color-brand-secure: var(--brand-secure);
+
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-subtle: var(--ink-subtle);
+  --color-ink-tertiary: var(--ink-tertiary);
+
+  --color-semantic-success: var(--semantic-success);
+  --color-semantic-error: var(--semantic-error);
+  --color-semantic-overlay: var(--semantic-overlay);
+
+  --font-linear: var(--font-inter), Inter, -apple-system, system-ui, Segoe UI, Roboto, sans-serif;
+  --font-linear-mono: ui-monospace, SF Mono, Menlo, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-xxl: 24px;
+}
+
+:root {
+  --canvas: #010102;
+  --surface-1: #0a0a0c;
+  --surface-2: #121215;
+  --surface-3: #1a1a1f;
+  --surface-4: #22222a;
+
+  --hairline: #23252a;
+  --hairline-strong: #32353f;
+  --hairline-tertiary: #16171a;
+
+  --primary: #5e6ad2;
+  --primary-hover: #828fff;
+  --primary-focus: #5e69d1;
+  --brand-secure: #7a7fad;
+
+  --ink: #f7f8f8;
+  --ink-muted: #d0d6e0;
+  --ink-subtle: #8a8f98;
+  --ink-tertiary: #62666d;
+
+  --semantic-success: #27a644;
+  --semantic-error: #e5484d;
+  --semantic-overlay: rgba(0, 0, 0, 0.85);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-linear);
+  -webkit-font-smoothing: antialiased;
+}
+
+.tracking-display-xl {
+  letter-spacing: -3.0px;
+}
+
+.tracking-display-lg {
+  letter-spacing: -1.8px;
+}
+
+.tracking-display-md {
+  letter-spacing: -1.0px;
+}
+
+.tracking-headline {
+  letter-spacing: -0.6px;
+}
+
+.tracking-card-title {
+  letter-spacing: -0.4px;
+}
+
+.tracking-subhead {
+  letter-spacing: -0.2px;
+}
+
+.tracking-body-lg {
+  letter-spacing: -0.1px;
+}
+
+.tracking-body {
+  letter-spacing: -0.05px;
+}
+
+.tracking-eyebrow {
+  letter-spacing: 0.4px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hairline);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hairline-strong);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 1s linear infinite;
+}

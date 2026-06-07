@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <rect width="512" height="512" rx="128" fill="#010102" stroke="#23252a" stroke-width="12"/>
+  <path d="M128 96C128 78.3 142.3 64 160 64H288L384 160V416C384 433.7 369.7 448 352 448H160C142.3 448 128 433.7 128 416V96Z" fill="#121215" stroke="#5e6ad2" stroke-width="20" stroke-linejoin="round"/>
+  <path d="M288 64V160H384L288 64Z" fill="#5e6ad2"/>
+  <line x1="176" y1="220" x2="336" y2="220" stroke="#f7f8f8" stroke-width="20" stroke-linecap="round" opacity="0.6"/>
+  <line x1="176" y1="280" x2="276" y2="280" stroke="#f7f8f8" stroke-width="20" stroke-linecap="round" opacity="0.6"/>
+  <line x1="176" y1="340" x2="316" y2="340" stroke="#f7f8f8" stroke-width="20" stroke-linecap="round" opacity="0.6"/>
+  <g transform="translate(260, 240) scale(0.45)">
+    <path d="M290.74 93.24l128.02 128.02L135.86 504.16 7.84 504.16l0-128.02L290.74 93.24z" fill="#5e6ad2" stroke="#f7f8f8" stroke-width="24" stroke-linejoin="round"/>
+    <path d="M354.74 29.24l128.02 128.02-36.88 36.88L317.86 66.12 354.74 29.24z" fill="#828fff" stroke="#f7f8f8" stroke-width="24" stroke-linejoin="round"/>
+  </g>
+</svg>
