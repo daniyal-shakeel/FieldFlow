@@ -40,6 +40,8 @@ interface UserProfile {
   tokens_balance?: number;
   referred_by?: string | null;
   referral_earned?: boolean;
+  tag?: string | null;
+  is_dev?: boolean;
 }
 
 interface UsageLog {
@@ -452,9 +454,16 @@ export default function UserMonitorPage() {
                       </div>
                     )}
                     <div className="min-w-0">
-                      <h2 className="text-sm font-semibold text-ink truncate leading-snug">
-                        {[data.user.first_name, data.user.last_name].filter(Boolean).join(' ') || 'User Account'}
-                      </h2>
+                      <div className="flex items-center gap-2">
+                        <h2 className="text-sm font-semibold text-ink truncate leading-snug">
+                          {[data.user.first_name, data.user.last_name].filter(Boolean).join(' ') || 'User Account'}
+                        </h2>
+                        {data.user.is_dev && (
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold tracking-wider uppercase bg-[#d977061a] text-[#f59e0b] border border-[#d9770633] flex-shrink-0">
+                            Dev
+                          </span>
+                        )}
+                      </div>
                       <p className="text-xs text-ink-subtle truncate">{data.user.email}</p>
                     </div>
                   </div>

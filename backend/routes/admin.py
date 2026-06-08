@@ -278,7 +278,9 @@ async def get_payment_proofs(admin: str = Depends(verify_token)) -> list:
             "tokens_added": p.get("tokens_added"),
             "created_at": p["created_at"].isoformat() if isinstance(p["created_at"], datetime) else p["created_at"],
             "approved_at": p["approved_at"].isoformat() if isinstance(p.get("approved_at"), datetime) else p.get("approved_at"),
-            "rejected_at": p["rejected_at"].isoformat() if isinstance(p.get("rejected_at"), datetime) else p.get("rejected_at")
+            "rejected_at": p["rejected_at"].isoformat() if isinstance(p.get("rejected_at"), datetime) else p.get("rejected_at"),
+            "tag": p.get("tag"),
+            "is_dev": p.get("is_dev")
         })
     return formatted
 

@@ -19,6 +19,8 @@ interface PaymentProof {
   created_at: string;
   approved_at?: string;
   rejected_at?: string;
+  tag?: string | null;
+  is_dev?: boolean;
 }
 
 interface User {
@@ -215,8 +217,15 @@ export default function PaymentsPage() {
               <tbody className="divide-y divide-hairline">
                 {proofs.map(p => (
                   <tr key={p.id} className="hover:bg-surface-2/30 transition-colors">
-                    <td className="px-5 py-4 font-mono truncate max-w-[200px]" title={p.clerk_id}>
-                      {userMap[p.clerk_id] || p.clerk_id}
+                    <td className="px-5 py-4 font-mono max-w-[220px]" title={p.clerk_id}>
+                      <div className="flex items-center gap-2 min-w-0">
+                        <span className="truncate">{userMap[p.clerk_id] || p.clerk_id}</span>
+                        {p.is_dev && (
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold tracking-wider uppercase bg-[#d977061a] text-[#f59e0b] border border-[#d9770633] flex-shrink-0">
+                            Dev
+                          </span>
+                        )}
+                      </div>
                     </td>
                     <td className="px-5 py-4 font-semibold text-ink uppercase">{p.plan_name}</td>
                     <td className="px-5 py-4 font-mono">

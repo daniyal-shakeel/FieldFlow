@@ -30,6 +30,8 @@ interface User {
   exports_count?: number;
   avg_rating?: number | null;
   ratings?: { rating: number; comment: string; timestamp: string }[];
+  tag?: string | null;
+  is_dev?: boolean;
 }
 
 
@@ -287,6 +289,11 @@ export default function UsersPage() {
                           <span className="font-medium text-ink whitespace-nowrap group-hover:text-primary group-hover:underline transition-colors">
                             {[user.first_name, user.last_name].filter(Boolean).join(' ') || 'User'}
                           </span>
+                          {user.is_dev && (
+                            <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold tracking-wider uppercase bg-[#d977061a] text-[#f59e0b] border border-[#d9770633] flex-shrink-0">
+                              Dev
+                            </span>
+                          )}
                         </div>
                       </td>
                       <td className="px-4 py-3 text-ink-muted whitespace-nowrap">{user.email || '—'}</td>

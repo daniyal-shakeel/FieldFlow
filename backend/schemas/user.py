@@ -26,6 +26,8 @@ class UserInDB(UserBase):
     created_at: datetime
     updated_at: datetime
     last_sync_at: datetime
+    tag: str | None = None
+    is_dev: bool | None = None
 
 
 class GrantCreditsRequest(BaseModel):

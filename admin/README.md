@@ -5,10 +5,10 @@ Admin panel for the FieldFlow PDF Editor. Provides user management and Clerk syn
 ## Features
 
 - **Login** — JWT-based authentication using credentials stored in backend `.env`
-- **Users** — View all users synced from Clerk with avatar, email, auth methods, external accounts, token balances, and timestamps. Features an "Award Credits" action to grant free credits/tokens with a mandatory explanation comment. Displays total uploads, exports, average rating, and a review comments popup modal for user feedback. Includes click navigators to open a dynamic **User Activity Monitoring Page** showing graphs, logs, transaction tables, and receipts.
+- **Users** — View all users synced from Clerk with avatar, email, auth methods, external accounts, token balances, and timestamps. Renders a distinct amber "Dev" tag next to usernames tagged in the database to separate development mock accounts. Features an "Award Credits" action to grant free credits/tokens with a mandatory explanation comment. Displays total uploads, exports, average rating, and a review comments popup modal for user feedback. Includes click navigators to open a dynamic **User Activity Monitoring Page** showing graphs, logs, transaction tables, and receipts.
 - **Analytics** — Dedicated usage metrics dashboard with daily uploads/exports SVG line/area graphs, rating distributions, KPIs, and a list of recent feedback comments. Graph node structures are strictly typed to ensure error-free compilation.
 - **Plans** — Custom tier manager to edit prices and token rewards for Starter, Standard, Pro, and Enterprise tiers
-- **Payment Proofs** — View payment proofs submitted by users, approve payments, enter actual amount received, and dynamically credit user wallets (rounded to whole numbers)
+- **Payment Proofs** — View payment proofs submitted by users, approve payments, enter actual amount received, and dynamically credit user wallets (rounded to whole numbers). Tagged development proofs display an amber "Dev" indicator badge.
 - **Payment Accounts** — Enable or disable specific bank/provider accounts in real-time
 - **Settings** — Manage token conversion rates and manually trigger Clerk-to-MongoDB user sync
 
